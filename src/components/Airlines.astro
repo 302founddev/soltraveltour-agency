@@ -1,0 +1,133 @@
+---
+
+---
+
+<div class='slider'>
+  <div class='slides'>
+    <div class='slide active'>
+      <img src='/images/Delta_logo.svg' alt='Delta Logo' />
+    </div>
+    <div class='slide'>
+      <img src='/images/Air_Europa_Logo.svg' alt='Air Europa Logo' />
+    </div>
+    <div class='slide'>
+      <img src='/images/Logotipo_de_Iberia.svg' alt='Iberia Logo' />
+    </div>
+    <div class='slide'>
+      <img src='/images/iberojet Logo.svg' alt='Iberojet Logo' />
+    </div>
+    <div class='slide'>
+      <img src='/images/latam_airlines.svg' alt='Latam airlines Logo' />
+    </div>
+    <div class='slide'>
+      <img src='/images/british_airways.webp' alt='british airways Logo' />
+    </div>
+  </div>
+  <div class='navigation'>
+    <button>&#10094;</button>
+    <button>&#10095;</button>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+
+  function showSlide(index: number) {
+    const slides = document.querySelectorAll(".slide");
+    if (!slides.length) {
+      console.error("No se encontraron los contenedores .slide");
+      return;
+    }
+
+    const totalSlides = slides.length;
+    if (index >= totalSlides) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else {
+      currentIndex = index;
+    }
+
+    const offset = -currentIndex * 100;
+    const slidesElement = document.querySelector(".slides") as HTMLElement;
+    if (slidesElement) {
+      slidesElement.style.transform = `translateX(${offset}%)`;
+    }
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    showSlide(currentIndex);
+
+    const prevButton = document.querySelector(".navigation button:first-child");
+    const nextButton = document.querySelector(".navigation button:last-child");
+
+    if (prevButton) {
+      prevButton.addEventListener("click", prevSlide);
+    } else {
+      console.error("No se encontró el botón de navegación anterior");
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", nextSlide);
+    } else {
+      console.error("No se encontró el botón de navegación siguiente");
+    }
+  });
+</script>
+
+<style>
+  .slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    padding: 50px 0;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    width: 80%;
+    display: block;
+  }
+
+  .navigation {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navigation button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    .navigation button {
+      padding: 5px;
+    }
+  }
+</style>
