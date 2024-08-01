@@ -1,0 +1,207 @@
+---
+
+---
+
+<header>
+  <div>
+    <a href='/'>
+      <img src='public/images/logo-suntraveltour.png' alt='not-logo' />
+    </a>
+
+    <div class='toggle_menu'>
+      <span class='material-symbols-outlined'> menu </span>
+    </div>
+  </div>
+
+  <nav class='nav'>
+    <div>
+      <span class='material-symbols-outlined close'> close </span>
+    </div>
+    <ul>
+      <li class='lis'><a href='/'>Inicio</a></li>
+      <li class='lis'><a href='/#ofertas'>Ofertas</a></li>
+      <li class='lis'><a href='/#servicios'>Servicios</a></li>
+      <li class='lis'><a href='/#equipo'>Equipo</a></li>
+      <li class='lis'><a href='/#nosotros'>Sobre nosotros</a></li>
+      <li class='lis'><a href='/#aerolineas'>Aerolíneas</a></li>
+      <li class='contact-button'>
+        <a href='/contactar' class='btn' rel='noreferer' role='button'>
+          Contactar
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script>
+    const menu: any = document.querySelector(".toggle_menu");
+    const nav: any = document.querySelector(".nav");
+    const close: any = document.querySelector(".close");
+    const lists: any = document.querySelector(".lis");
+
+    menu.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    close.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+
+    lists.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  </script>
+</header>
+
+<style>
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  img {
+    width: 70px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: end;
+    width: 90%;
+  }
+
+  .nav ul {
+    padding-left: 0;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .btn {
+    padding: 6px 25px;
+    background: #049edb;
+    color: #fff;
+    border-radius: 0.2em;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .nav > a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .nav > a,
+  .nav > a > img {
+    width: 70px;
+    height: 70px;
+    transition: all 0.3s ease;
+  }
+
+  .lis {
+    list-style: none;
+  }
+
+  .lis a {
+    text-decoration: none;
+    color: #045cb4;
+    font-weight: lighter;
+    font-size: 1.1em;
+  }
+
+  .lis a:hover {
+    text-decoration: underline;
+  }
+
+  span {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    header {
+      display: flex;
+      margin: auto;
+    }
+
+    header > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    header > div span {
+      cursor: pointer;
+      font-size: 2rem;
+      border: 1px solid #045cb4;
+      border-radius: 5px;
+    }
+
+    .nav {
+      width: 100%;
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    .nav.active {
+      display: flex;
+      justify-content: end;
+    }
+
+    .nav ul {
+      display: flex;
+      flex-direction: column;
+      padding-top: 78px;
+      padding-right: 20px;
+      width: 280px;
+      background: #045cb4;
+      margin: 0;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+      align-items: end;
+      gap: 1.5rem;
+      transition: 0.5s transform;
+    }
+
+    .nav a {
+      color: #fff;
+    }
+
+    .nav a:hover {
+      text-decoration: none;
+    }
+
+    .contact-button {
+      display: none;
+    }
+
+    .toggle_menu span {
+      color: #000;
+      display: flex;
+    }
+
+    .close {
+      z-index: 2;
+      height: 8%;
+      color: #ffffff;
+      position: absolute;
+      display: block;
+      right: 15px;
+      cursor: pointer;
+      box-sizing: border-box;
+      margin-top: 30px;
+    }
+  }
+</style>

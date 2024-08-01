@@ -1,0 +1,258 @@
+---
+
+---
+
+<section id='servicios'>
+  <h2>Servicios</h2>
+
+  <div>
+    <span class='span-text'>
+      En Sol Traveltour nuestra dedicación es hacer tu viaje inolvidable.
+      <br />Descubre cómo podemos transformar tus sueños en realidades únicas.
+    </span>
+  </div>
+
+  <div class='cards-container'>
+    <div class='box-model'>
+      <img src='./images/vuelo.webp' alt='Vuelo...' />
+      <div>
+        <h3>Vuelos</h3>
+        <span>Mejores precios de vuelo ¡con mayor equipaje!</span>
+      </div>
+    </div>
+    <div class='box-model'>
+      <img src='./images/hoteles.webp' alt='hoteles...' />
+      <div>
+        <h3>Hotels</h3>
+        <span>Reserva los mejores hoteles para tu viaje.</span>
+      </div>
+    </div>
+    <div class='box-model'>
+      <img src='./images/asesoriaenvisados.webp' alt='asesoria en visados...' />
+      <div>
+        <h3>Asesoría en visados</h3>
+        <span>Evita ir al consulado, te ayudamos con tu visa.</span>
+      </div>
+    </div>
+    <div class='box-model'>
+      <img src='./images/segurodeviaje.webp' alt='seguro de viaje...' />
+      <div>
+        <h3>Seguro de viaje</h3>
+        <span>Gestionamos un seguro de viaje obligatorio.</span>
+      </div>
+    </div>
+  </div>
+
+  <div id='equipo'>
+    <h2>Nuestro equipo</h2>
+    <span class='span-text'>
+      Somos un equipo apasionado por los viajes, expertos en hacerte vivir
+      experiencias inolvidables. Conócenos mejor aquí.
+    </span>
+    <div>
+      <div class='leader-picture'>
+        <img src='../../public/images/yuberkysimage.webp' alt='' />
+        <article>
+          <h2 class='leader-h2 ybk'>Yuberkys</h2>
+          <span>
+            Yuberkys: Visionaria del turismo, experta en viajes y logística.
+            Líder de nuestra agencia de viajes entregando experiencias
+            inolvidables.
+          </span>
+        </article>
+      </div>
+
+      <a
+        class='ws-button'
+        slot='before'
+        href='https://api.whatsapp.com/send?phone=34600284568'>
+        <span class='material-symbols-outlined'>chat</span>
+        Contactar con Yuberkys
+      </a>
+    </div>
+  </div>
+
+  <style>
+    #servicios {
+      margin: auto;
+      background-color: #e4faff;
+      box-sizing: border-box;
+      padding: 1.5rem 1.2rem;
+    }
+
+    #servicios h2 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      font-size: 2em;
+      font-weight: 900;
+      transition: all 0.3s ease;
+      margin: 0 auto;
+    }
+
+    #section > div {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .span-text {
+      font-size: 1.2em;
+      line-height: 1.7em;
+      font-weight: 300;
+      width: 55%;
+      text-align: center;
+      padding: 2rem 0;
+      display: flex;
+      margin: auto;
+      justify-content: center;
+    }
+
+    .cards-container {
+      padding-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .box-model {
+      display: flex;
+      gap: 1rem;
+      background-color: #fff;
+      border-radius: 15px;
+      align-items: center;
+    }
+
+    .box-model div {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .box-model img {
+      height: 10vh;
+      padding: 10px;
+    }
+
+    .box-model div h3 {
+      margin: 0;
+    }
+
+    .box-model div span {
+      font-weight: lighter;
+    }
+
+    #equipo {
+      padding-top: 30px;
+    }
+
+    #equipo > div {
+      width: 60%;
+      display: flex;
+      border: 1px solid orange;
+      border-radius: 10px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 25px;
+      gap: 1.5rem;
+      flex-direction: column;
+    }
+
+    #equipo > div > span {
+      font-weight: lighter;
+      font-size: 1.2em;
+      display: flex;
+      text-align: center;
+      text-wrap: wrap;
+      width: 64%;
+      margin: auto;
+    }
+
+    .leader-picture {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .leader-picture img {
+      width: 8vw;
+    }
+
+    .leader-h2 {
+      padding-bottom: 25px !important;
+      margin-bottom: 0;
+    }
+
+    .ybk {
+      justify-content: start !important;
+    }
+
+    .ws-button {
+      padding: 8px 25px;
+      background: #04aa6d;
+      color: #fff;
+      border-radius: 0.2em;
+      text-decoration: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: 767px) {
+      #servicios {
+        width: 100%;
+      }
+      .span-text {
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .box-model {
+        flex-direction: column;
+        box-sizing: border-box;
+        gap: 0;
+      }
+
+      .box-model div {
+        align-items: center;
+        box-sizing: border-box;
+        gap: 1rem;
+      }
+
+      .box-model div span {
+        padding: 0 7px 10px 7px;
+      }
+
+      .leader-picture {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+
+      .leader-picture img {
+        width: 20vw;
+      }
+
+      .leader-h2 {
+        font-size: 1.5em !important;
+      }
+
+      #team > div {
+        width: 90%;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  </style>
+</section>

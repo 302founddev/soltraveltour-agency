@@ -1,0 +1,78 @@
+---
+
+---
+
+<section class='container'>
+  <form>
+    <label for='name'>
+      <input type='text' placeholder='name' />
+    </label>
+    <label for='lname'>
+      <input type='text' placeholder='lname' />
+    </label>
+  </form>
+</section>
+
+<style>
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  input[type="submit"] {
+    background-color: #3278c6;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #275f9f;
+  }
+
+  .container {
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 150px 20px 20px 20px;
+    width: 70%;
+    margin: auto;
+  }
+
+  .container > div {
+    margin: auto;
+    display: flex;
+    padding: 30px 0;
+  }
+
+  .container > div h2 {
+    margin: auto;
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      width: 95%;
+      padding-top: 50px;
+    }
+    .container > div h2 {
+      margin: 0;
+    }
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+</style>

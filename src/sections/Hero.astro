@@ -1,0 +1,132 @@
+---
+
+---
+
+<section>
+  <div>
+    <h2>Descubre la aventura y la emoción con nuestros viajes inolvidables.</h2>
+
+    <article>
+      <span>
+        Sumérgete en destinos exóticos, saborea culturas fascinantes, y crea
+        recuerdos inolvidables sin paquetes de viaje personalizados. <br /> ¡Que
+        la aventura comience hoy mismo!
+      </span>
+    </article>
+
+    <div class='btn-container'>
+      <a slot='after' href='https://api.whatsapp.com/send?phone=34600284568'>
+        ME INTERESA <span
+          class='material-symbols-outlined airplane-ticket'
+          style='font-size: 20px !important;'>airplane_ticket</span
+        >
+      </a>
+    </div>
+  </div>
+
+  <figure>
+    <img src='public/images/imagen-hero-2.webp' alt="Image can't be showed" />
+  </figure>
+</section>
+
+<style>
+  section {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    margin-top: 0;
+    gap: 3rem;
+    transition: all 0.3s ease;
+  }
+
+  section > div > h2 {
+    font-size: 2.05em;
+    color: #fe7913;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    margin-top: 0;
+    text-wrap: pretty;
+  }
+
+  .btn-container a {
+    padding: 6px 25px;
+    background: #fe8f09;
+    color: #fff;
+    border-radius: 0.2em;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    width: 80%;
+  }
+
+  section > div {
+    width: 45%;
+    box-sizing: border-box;
+  }
+
+  section > div article {
+    padding-bottom: 30px;
+    box-sizing: border-box;
+  }
+
+  section > div span {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    text-wrap: pretty;
+  }
+
+  .btn-container {
+    width: 10rem;
+  }
+
+  a {
+    padding: 10px 25px;
+    background: #049edb;
+    color: #fff;
+    border-radius: 0.2em;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:hover {
+    background: #028dc5;
+  }
+
+  figure img {
+    width: 35vw;
+  }
+
+  @media screen and (max-width: 767px) {
+    section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    section > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    figure {
+      margin: 0;
+      margin-left: 110px;
+    }
+
+    figure img {
+      width: 70vw;
+    }
+  }
+</style>

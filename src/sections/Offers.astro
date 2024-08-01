@@ -1,0 +1,188 @@
+---
+
+---
+
+<section>
+  <h2 id='ofertas'>Descubre nuestras ofertas</h2>
+  <p>
+    Experiencias únicas, aventuras inolvidables y descuentos exclusivos. <br /> Tu
+    próximo viaje comienza aquí.
+  </p>
+  <div>
+    <div class='cont-card'>
+      <img src='/images/RIVERA-MAYA-SUN-TRAVELTOUR.webp' />
+      <div class='prices'>
+        <span>Rivera Maya vuelo + hotel</span>
+        <span>Desde 890€ 7 noches</span>
+      </div>
+      <div>
+        <a
+          class='offer-btn'
+          href='https://api.whatsapp.com/send?phone=34600284568&text=Me%20gustaría%20tener%20mas%20info%20sobre%20el%20viaje%20a%20rivera%20maya;%20vuelo%20mas%20hotel%20desde%20890€%207%20noches'>
+          RESERVAR <span class='material-symbols-outlined'
+            >arrow_circle_right</span
+          >
+        </a>
+      </div>
+    </div>
+    <div class='cont-card'>
+      <img src='/images/REPUBLICA-DOMINICANA-SUN-TRAVELTOUR.webp' />
+      <div class='prices'>
+        <span>República Dominicana</span>
+        <span>Desde 259€ solo ida | 480€ Ida y vuelta</span>
+      </div>
+      <div>
+        <a
+          class='offer-btn'
+          href='https://api.whatsapp.com/send?phone=34600284568&text=Me%20gustaría%20mas%20info%20sobre%20el%20vuelo%20a%20República%20Dominicana'>
+          RESERVAR <span class='material-symbols-outlined'
+            >arrow_circle_right</span
+          >
+        </a>
+      </div>
+    </div>
+    <div class='cont-card'>
+      <img src='/images/QUITO-ECUADOR-SUN-TRAVELTOUR.webp' />
+      <div class='prices'>
+        <span>Quito solo ida desde 810€</span>
+        <span>Ida y vuelta desde 1250€</span>
+      </div>
+      <div>
+        <a
+          class='offer-btn'
+          href='https://api.whatsapp.com/send?phone=34600284568&text=Me%20gustaría%20mas%20info%20sobre%20el%20vuelo%20a%20Quito%20desde%20810€'>
+          RESERVAR <span class='material-symbols-outlined'
+            >arrow_circle_right</span
+          >
+        </a>
+      </div>
+    </div>
+    <div class='cont-card'>
+      <img src='/images/CANCUN-SUN-TRAVELTOUR.webp' />
+      <div class='prices'>
+        <span>Vuelo a Cancún</span>
+        <span>Desde 1234€</span>
+      </div>
+      <div>
+        <a
+          class='offer-btn'
+          href='https://api.whatsapp.com/send?phone=34600284568&text=Hola%20me%20gustaría%20más%20info%20sobre%20el%20viaje%20a%20Cancún%20desde%201234€'>
+          RESERVAR <span class='material-symbols-outlined'
+            >arrow_circle_right</span
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    padding-bottom: 2rem;
+    margin: auto;
+  }
+
+  section > h2 {
+    font-size: 2em;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  section p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    font-weight: 300;
+    width: 55%;
+    text-align: center;
+    padding-bottom: 3rem;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+
+  section > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    row-gap: 30px;
+    column-gap: 20px;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
+  }
+
+  .cont-card {
+    border: 1px solid rgb(237, 235, 235);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    transition: all 0.3s ease;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cont-card:hover {
+    border: 1px solid orange;
+    transition: all 500ms ease;
+    transform: scale(1.05);
+  }
+
+  .cont-card img {
+    width: 100%;
+  }
+
+  .cont-card > div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    gap: 0.5em;
+  }
+
+  .cont-card > div span {
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  .cont-card a {
+    display: flex;
+  }
+
+  .offer-btn {
+    padding: 6px 25px;
+    background: #039ed9;
+    color: #fff;
+    border-radius: 0.2em;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .offer-btn:hover {
+    background: #028dc5;
+  }
+
+  @media screen and (max-width: 767px) {
+    section {
+      padding-top: 50px;
+    }
+
+    section p {
+      width: 100%;
+    }
+
+    .cont-card {
+      border-color: orange;
+      width: 95%;
+      margin: auto;
+    }
+
+    .cont-card:hover {
+      border-color: #ccc;
+    }
+  }
+</style>
